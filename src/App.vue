@@ -1,8 +1,11 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/contact">Contact</router-link>
+    <div class="link">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/contact">Contact</router-link>
+    </div>
+    <a href="#">Hello world</a>
   </nav>
   <transition name="router-anim">
     <router-view/>
@@ -20,6 +23,12 @@
     height: calc(100% - 50px);
   }
 
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   nav a {
     text-decoration: none;
     color: #000;
@@ -32,16 +41,16 @@
 
   #app {
     background: #fff;
-    width: 50%;
+    width: 95%;
+    margin: auto;
     padding: 30px;
     border-radius: 10px;
-    margin: 50px auto 0 auto;
     height: calc(60% - 50px);
+    position: relative;
   }
 
   .page {
-    position: fixed;
-    width: inherit;
+    width: 100%;
   }
 
   .router-anim-enter-active {
