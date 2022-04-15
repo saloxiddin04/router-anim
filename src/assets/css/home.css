@@ -1,0 +1,51 @@
+.bg {
+    position: absolute;
+    top: 12%;
+    left: 0;
+    width: 100%;
+    height: 88%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    height: 88vh;
+    gap: 20px;
+    color: #ffffff;
+}
+
+.home h1 .typed-text {
+    color: #008000;
+}
+
+.home h1 .cursor {
+    background: #ffffff;
+    margin-left: 3px;
+    width: 4px;
+    display: inline-block;
+    animation: cursor 1s infinite;
+}
+
+.cursor.typing {
+    animation: none;
+}
+
+@keyframes cursor {
+    49% {
+        background-color: #ffffff;
+    }
+    50%{
+        background-color: transparent;
+    }
+    99%{
+        background-color: transparent;
+    }
+}
+
+.home p {
+    line-height: 2;
+}

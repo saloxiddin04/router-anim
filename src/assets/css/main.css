@@ -1,0 +1,103 @@
+@import "home.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(233, 233, 233);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: calc(100% - 50px);
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+nav {
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    color: #fff;
+}
+
+nav .link {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.4s;
+}
+
+.router-link-active {
+    color: green;
+}
+
+.page {
+    width: 100%;
+}
+
+.router-anim-enter-active {
+    animation: coming 1s;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.router-anim-leave-active {
+    animation: going 1s;
+}
+
+@keyframes going {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+}
+
+@keyframes coming {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.social svg {
+    fill: #ffffff;
+    transition: 0.4s;
+}
+
+.social a:hover svg {
+    fill: #008000;
+}
